@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Limelight", sans-serif;
+	text-rendering: optimizeLegibility;
+    text-decoration: none;
+    border: none;
+}
+body {
+	overflow: hidden;
+}
+
+.well {
+	position: relative;
+	overflow: hidden;
+	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/*************************** nav *******************************/
+nav{  
+    margin-top: .5rem; 
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    border-radius: 10px;
+    padding: .4rem;
+    font-size: 3vmin;
+    color: white;
+    transition: all .27s linear;
+}
+nav a img{
+    opacity: .5; 
+    width: 6vmin;
+    transition: opacity .3s linear;
+}
+nav a img:hover{
+    opacity: 1;
+}
+
+/*************************** panels *******************************/
+.panel {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	font-size: 10vmin;
+	padding: 1em;
+	box-sizing: border-box;
+	color: hsla(0, 0%, 100%, .1);
+}
+
+/******************** Panel main ***********************/
+#panel-main {
+	background-image: url(pexels-cottonbro-5871217.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+}
+.hero{
+    width: 100%;
+    color: white;
+    display: flex;
+    font-size: 6vmin;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.hero h1{
+    font-size: 10vmin;
+}
+.hero p{
+    max-width: 18ch;
+}
+.hero p::before{
+    font-size: 10vmin;
+    content: "lorem ipsum dolor";
+    position: relative;
+    width: 65%;
+    background-color: purple;
+    display: block;
+    mix-blend-mode: hard-light;
+
+}
+#scroll-down{
+    font-size: 5vmin;
+    color: rgba(255, 255, 255, 0.678);
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    animation: fadeInOutAnim 3.3s linear alternate infinite;
+}
+@keyframes fadeInOutAnim{
+    0%{opacity: .65;}
+    50%{opacity: .1;}
+    100%{opacity: .65;}
+}
+
+/******************** Panel 2 ***********************/
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    max-width: 350px;
+    width: 30%;
+    padding: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin: .5rem;
+    color: rgb(82, 82, 82);
+    background-color: yellow;
+    transition: all .24s linear;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card h2{
+    font-size: 4vmin;
+}
+.card p{
+    font-size: 3vmin;
+}
+.card button{
+    border-radius: 15px;
+    background-color: white;
+    font-size: 2vmin;
+    width: 100%;
+    padding: 1rem;
+}.card button:hover{
+    background-color: whitesmoke;
+}
